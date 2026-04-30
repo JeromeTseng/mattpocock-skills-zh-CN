@@ -6,6 +6,18 @@
 
 我每天用于真实工程工作的 agent skills，不是 vibe coding。
 
+## 维护翻译
+
+本仓库使用内容刷新工作流跟进上游 `mattpocock/skills`，不会同步上游 Git 历史、issue、PR、label、release 或仓库设置。
+
+维护者可以运行：
+
+```sh
+node scripts/refresh-content.mjs --upstream-dir ../skills
+```
+
+详见 [翻译内容刷新工作流](./docs/translation-refresh.md) 和 [Translation Refresh Harness](./TRANSLATION_REFRESH_HARNESS.md)。
+
 如果你想跟进这些 skills 的更新，以及我后续创建的新 skill，可以加入大约 60,000 名开发者订阅的 newsletter：
 
 [订阅 Newsletter](https://www.aihero.dev/s/skills-newsletter)

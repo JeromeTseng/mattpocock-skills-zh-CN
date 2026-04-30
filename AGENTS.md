@@ -16,4 +16,4 @@ Every bucket folder has a `README.md` that lists all skills in that bucket and g
 
 ## Translation Refresh
 
-For upstream content refreshes from `mattpocock/skills`, read `TRANSLATION_REFRESH_HARNESS.md` before changing files. This repo uses a content refresh workflow, not a Git fork-sync workflow: preserve the Simplified Chinese localized identity, keep install commands pointed at `vinvcn/mattpocock-skills-zh-CN`, and do not import upstream repository-management state.
+For upstream content refreshes from `mattpocock/skills`, use `.skills/translate-skill/SKILL.md` before changing files. This repo uses skill-guided content localization, not Git fork-sync: preserve the Simplified Chinese localized identity, keep install commands pointed at `vinvcn/mattpocock-skills-zh-CN`, and do not import upstream repository-management state.

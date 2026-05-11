@@ -118,9 +118,26 @@ When refreshing from upstream:
 3. Translate new and changed prose-bearing files.
 4. Copy or preserve non-translatable support files only when they are in scope.
 5. Preserve the localized repo’s README positioning and install path.
-6. Add a concise entry to the README sync log.
-7. Flag ambiguous files, removed files, or risky transformations for maintainer review.
-8. Summarize translated files, copied files, removed files, skipped files, and review flags.
+6. 按“验证步骤”完成同步后的结构、完整性、索引和行为关键内容检查。
+7. Add a concise entry to the README sync log.
+8. 在 README 中记录本次验证结果、翻译执行者和翻译策略摘要。
+9. Flag ambiguous files, removed files, or risky transformations for maintainer review.
+10. 总结已翻译文件、复制或保留文件、移除文件、跳过文件、验证结果和复核标记。
+
+## 验证步骤
+
+每次上游内容刷新后，必须完成并记录以下检查：
+
+1. 运行 `node scripts/check-translation.mjs`，确认 Markdown 结构、frontmatter、README install path 和 license invariant 没被破坏。
+2. 检查公开 skill 索引一致性：`engineering/`、`productivity/`、`misc/` 下的 skills 必须同时出现在顶层 `README.md` 和 `.claude-plugin/plugin.json`；`personal/`、`in-progress/`、`deprecated/` 不应出现在 plugin 或顶层公开索引中。
+3. 对比 `upstream/main` 的 in-scope 文件清单，确认没有缺失上游文件，也没有保留已经从上游移除且不属于本地策略的 stale files。
+4. 检查共同 Markdown 文件的行为关键内容：frontmatter keys 和 `name` 值不变，fenced code blocks 平衡，路径、命令、URL、identifier 不被误改。
+5. 运行 `git diff --check` 和 `git diff --cached --check`，确认没有 whitespace 或 patch hygiene 问题。
+6. 检查 README 同步记录指向最新 upstream short SHA，并包含本地同步 commit；不能留下“待定”占位。
+7. 扫描 stale install path 和旧路径，例如仍指向上游 repo 的安装命令、旧的中文仓库短路径、已移除的 triage skill 名、已移除的 domain-model 相对路径等。
+8. 运行 `node scripts/audit-english.mjs` 作为人工复核队列。该脚本在本仓库会包含大量合理的英文术语、命令、示例和 identifiers，因此只作为 review flag，不作为硬性失败门槛。
+
+验证结果应同步写入顶层 `README.md`，使用简短 checklist，不要把完整命令输出粘进去。
 
 ## README sync log
 
@@ -162,6 +179,9 @@ Review flags:
 - ...
 
 README sync log:
+- ...
+
+验证结果:
 - ...
 
 Invariant checks:

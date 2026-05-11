@@ -18,7 +18,7 @@
 
 ## 同步记录
 
-- 2026-05-11：同步上游 `mattpocock/skills@9f2e0bd`，本地提交 `911977a`。将 `handoff` 提升到 productivity，新增 `review` 草稿，并更新 writing skills。
+- 2026-05-11：同步上游 `mattpocock/skills@9f2e0bd`，本地提交 `210cbac`。将 `handoff` 提升到 productivity，新增 `review` 草稿，并更新 writing skills。
 - 2026-05-09：同步上游 `mattpocock/skills@733d312`，本地提交 `c9fe120`。新增 `prototype` 与 `in-progress` 内容的中文翻译，并更新公开 skill 索引。
 
 我每天用于真实工程工作的 agent skills，不是 vibe coding。

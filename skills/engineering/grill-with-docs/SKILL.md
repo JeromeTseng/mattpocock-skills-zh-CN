@@ -73,7 +73,7 @@ description: Grilling session that challenges your plan against the existing dom
 
 当一个 term 被解决时，立即更新 `CONTEXT.md`。不要攒到最后；随着发生就捕获。使用 [CONTEXT-FORMAT.md](./CONTEXT-FORMAT.md) 中的格式。
 
-不要把 `CONTEXT.md` 和实现细节耦合。只包含对 domain experts 有意义的 terms。
+`CONTEXT.md` 应完全不包含实现细节。不要把 `CONTEXT.md` 当作 spec、scratch pad 或实现决策仓库。它只是 glossary，除此之外不承担别的职责。
 
 ### Offer ADRs sparingly
 

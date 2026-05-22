@@ -44,20 +44,30 @@ description: 根据 CONTEXT.md 中的 domain language 和 docs/adr/ 中的 decis
 
 对任何疑似 shallow 的东西应用 **deletion test**：删除它会集中复杂性，还是只是移动复杂性？“会集中”就是你要找的信号。
 
-### 2. Present candidates
+### 2. Present candidates as an HTML report
 
-展示一个编号列表，列出 deepening opportunities。每个 candidate 包含：
+写一个 self-contained HTML file 到 OS temp directory，避免任何内容落进 repo。Temp dir 从 `$TMPDIR` 解析，fallback 到 `/tmp`（Windows 上用 `%TEMP%`），并写入 `<tmpdir>/architecture-review-<timestamp>.html`，确保每次运行都有新文件。为用户打开它：Linux 用 `xdg-open <path>`，macOS 用 `open <path>`，Windows 用 `start <path>`，并告诉用户绝对路径。
+
+Report 使用 **Tailwind via CDN** 做 layout 和 styling，使用 **Mermaid via CDN** 处理适合 graph/flow/sequence 的 diagrams。Mermaid 要和手写 CSS/SVG visual 混用：关系是 graph-shaped（call graphs、dependencies、sequences）时用 Mermaid；想要更 editorial 的效果（mass diagrams、cross-sections、collapse animations）时用 hand-built divs/SVG。每个 candidate 都要有一个 **before/after visualisation**。要视觉化。
+
+每个 candidate 仍使用之前的模板，但渲染成 card：
 
 - **Files** — 涉及哪些 files/modules
 - **Problem** — 当前 architecture 为什么造成 friction
 - **Solution** — 用普通语言说明会改变什么
-- **Benefits** — 用 locality 和 leverage 解释，也说明 tests 会如何改善
+- **Benefits** — 用 locality 和 leverage 解释，并说明 tests 会如何改善
+- **Before / After diagram** — side-by-side，自定义绘制，说明 shallowness 和 deepening
+- **Recommendation strength** — `Strong`、`Worth exploring`、`Speculative` 之一，渲染成 badge
+
+Report 最后加一个 **Top recommendation** section：你会先处理哪个 candidate，以及原因。
 
 **domain 词汇使用 CONTEXT.md，architecture 词汇使用 [LANGUAGE.md](LANGUAGE.md)。** 如果 `CONTEXT.md` 定义了 “Order”，就说 “Order intake module”，不要说 “FooBarHandler”，也不要说 “Order service”。
 
-**ADR conflicts**：如果 candidate 与现有 ADR 冲突，只有当 friction 真实到值得重开 ADR 时才提出。明确标记（例如 _"contradicts ADR-0007 — but worth reopening because…"_）。不要列出 ADR 理论上禁止的每个 refactor。
+**ADR conflicts**：如果 candidate 与现有 ADR 冲突，只有当 friction 真实到值得重开 ADR 时才提出。在 card 中明确标记（例如一个 warning callout：_"contradicts ADR-0007 — but worth reopening because…"_）。不要列出 ADR 理论上禁止的每个 refactor。
 
-不要还没问用户就提出 interfaces。问用户：“你想探索哪一个？”
+完整 HTML scaffold、diagram patterns 和 styling guidance 见 [HTML-REPORT.md](HTML-REPORT.md)。
+
+不要还没问用户就提出 interfaces。文件写好后，问用户：“你想探索哪一个？”
 
 ### 3. Grilling loop
 

@@ -20,6 +20,7 @@
 
 ### 发布记录
 
+- 2026-06-16：同步上游 `mattpocock/skills@694fa30`，本地提交 `6b594d2`。将 `teach` 从 in-progress 提升到 productivity，并更新 teaching workspace 指南：`lessons/`、`reference/`、storage strength、primary source、follow-up questions 和 quiz 答案长度约束。
 - 2026-06-05：同步上游 `mattpocock/skills@aaf2453`，本地提交 `0f36f6d`。更新 `to-prd` 的 seam-based 测试决策指导，并强化 in-progress `teach` explainers 的 citations 与 interactivity 要求。
 - 2026-05-29：同步上游 `mattpocock/skills@e3b90b5`，本地提交 `fb2000f`。新增 in-progress `teach` skill 的中文翻译，并更新 `CONTEXT.md` template 规则。
 - 2026-05-22：同步上游 `mattpocock/skills@b8be62f`，本地提交 `f0b4bd3`。新增 architecture HTML report 指南，更新 handoff 临时文件与 redaction 规则，并收紧 `CONTEXT.md` template。
@@ -29,14 +30,14 @@
 
 ### 最新 main 验证
 
-针对 `mattpocock/skills@aaf2453` 的同步结果：
+针对 `mattpocock/skills@694fa30` 的同步结果：
 
 - [x] `node scripts/check-translation.mjs` 通过。
 - [x] 公开 skill 索引一致：`engineering/`、`productivity/`、`misc/` 已同步到顶层 README 和 `.claude-plugin/plugin.json`，`personal/`、`in-progress/`、`deprecated/` 未进入 plugin。
 - [x] 上游 in-scope 文件完整：没有缺失上游文件，也没有 stale translated upstream files。
 - [x] 66 个共同 Markdown 文件的保护性检查通过：frontmatter `name` 未漂移，frontmatter key 未缺失，fenced code blocks 平衡。
 - [x] `git diff --check` 和 `git diff --cached --check` 通过。
-- [x] README 同步记录指向最新上游 `aaf2453`，并记录本地同步提交 `0f36f6d`。
+- [x] README 同步记录指向最新上游 `694fa30`，并记录本地同步提交 `6b594d2`。
 - [x] 行为关键扫描未发现旧安装路径或旧 skill 路径，例如旧的 `vinvcn` 短仓库路径、已移除的 triage skill 名、已移除的 domain-model 相对路径等。
 - [!] `node scripts/audit-english.mjs` 仍会列出大量英文内容；这些主要是保留的 identifiers、命令、示例、触发词和工程术语，作为人工复核队列，不作为阻塞项。
 

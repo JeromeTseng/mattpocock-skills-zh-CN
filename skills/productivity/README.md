@@ -1,9 +1,18 @@
-# Productivity Skills
+# Productivity
 
-日常非代码工作流工具。
+通用工作流工具，不限于代码。
 
-- [caveman](./caveman/SKILL.md) — 超压缩沟通模式。
-- [grill-me](./grill-me/SKILL.md) — 对计划或设计进行持续追问。
-- [handoff](./handoff/SKILL.md) — 将当前对话压缩成 handoff document，让另一个 agent 可以继续工作。
-- [teach](./teach/SKILL.md) — 使用当前目录作为 stateful teaching workspace，在多个 sessions 中教用户一个新 skill 或概念。
-- [write-a-skill](./write-a-skill/SKILL.md) — 创建结构良好的新 agent skills。
+## User-invoked
+
+只有在你显式输入名称时才能调用（`disable-model-invocation: true`）。
+
+- **[grill-me](./grill-me/SKILL.md)** - 围绕计划或设计进行持续追问，直到 decision tree 的每个分支都被解决。
+- **[handoff](./handoff/SKILL.md)** - 把当前对话压缩成 handoff document，让另一个 agent 可以继续。
+- **[teach](./teach/SKILL.md)** - 使用当前目录作为 stateful teaching workspace，在多个 sessions 中教用户一个新 skill 或概念。
+- **[writing-great-skills](./writing-great-skills/SKILL.md)** - 编写和编辑优秀 skills 的 reference：让 skill 可预测的词汇和原则。
+
+## Model-invoked
+
+模型或用户都可以调用（description 包含足够丰富的触发措辞，方便模型自动找到它们）。
+
+- **[grilling](./grilling/SKILL.md)** - 围绕计划或设计持续访谈用户，直到 decision tree 的每个分支都被解决。

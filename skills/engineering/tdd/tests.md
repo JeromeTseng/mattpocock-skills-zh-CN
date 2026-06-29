@@ -14,17 +14,17 @@ test("user can checkout with valid cart", async () => {
 });
 ```
 
-特点：
+Characteristics：
 
 - 测试 users/callers 关心的 behavior
 - 只使用 public API
-- 能经受 internal refactors
-- 描述 WHAT，不描述 HOW
-- 每个 test 一个逻辑断言
+- 能承受 internal refactors
+- 描述 WHAT，而不是 HOW
+- 每个 test 一个 logical assertion
 
 ## Bad Tests
 
-**Implementation-detail tests**：耦合内部结构。
+**Implementation-detail tests**：与 internal structure 耦合。
 
 ```typescript
 // BAD: Tests implementation details
@@ -35,14 +35,14 @@ test("checkout calls paymentService.process", async () => {
 });
 ```
 
-危险信号：
+Red flags：
 
 - Mocking internal collaborators
 - Testing private methods
-- 断言 call counts/order
-- behavior 没变但 refactoring 后 test 失败
-- test name 描述 HOW 而不是 WHAT
-- 绕过 interface，通过外部手段验证
+- Asserting on call counts/order
+- Refactor 但 behavior 未变时 test breaks
+- Test name 描述 HOW 而不是 WHAT
+- 绕过 interface 用外部方式验证
 
 ```typescript
 // BAD: Bypasses interface to verify

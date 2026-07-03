@@ -1,16 +1,15 @@
 ---
 name: handoff
-description: 把当前对话压缩成 handoff document，让另一个 agent 接手。
+description: Compact the current conversation into a handoff document for another agent to pick up.
 argument-hint: "What will the next session be used for?"
-disable-model-invocation: true
 ---
 
-编写一份 handoff document，总结当前对话，让 fresh agent 能继续工作。保存到用户操作系统的临时目录，不要保存到当前 workspace。
+写一份 handoff document，总结当前对话，让 fresh agent 可以继续工作。保存到用户 OS 的 temporary directory，而不是当前 workspace。
 
-在文档中包含 "suggested skills" section，建议下一个 agent 应调用哪些 skills。
+在文档中包含一个 “suggested skills” section，建议 agent 应 invoke 的 skills。
 
-不要重复已经被其他 artifacts 捕获的内容（PRDs、plans、ADRs、issues、commits、diffs）。改用 path 或 URL 引用它们。
+不要重复已经捕获在其他 artifacts（PRDs、plans、ADRs、issues、commits、diffs）中的内容。改用 path 或 URL 引用它们。
 
-删去任何敏感信息，例如 API keys、passwords 或 personally identifiable information。
+Redact 任何 sensitive information，例如 API keys、passwords 或 personally identifiable information。
 
-如果用户传入了 arguments，把它们视为下一次 session 的关注点描述，并据此调整文档。
+如果用户传入了 arguments，把它们视为下一次 session 重点的描述，并据此调整文档。

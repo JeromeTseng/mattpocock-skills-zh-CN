@@ -1,6 +1,6 @@
 ---
 name: handoff
-description: 把当前对话压缩成 handoff document，让另一个 agent 接手。
+description: 把当前对话压缩成交接文档，让另一个代理接手。
 argument-hint: "What will the next session be used for?"
 disable-model-invocation: true
 ---

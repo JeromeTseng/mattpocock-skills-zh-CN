@@ -1,6 +1,6 @@
 ---
 name: request-refactor-plan
-description: 通过 user interview 创建带 tiny commits 的详细 refactor plan，然后 file as a GitHub issue。Use when user wants to plan a refactor, create a refactoring RFC, or break a refactor into safe incremental steps.
+description: 通过用户访谈创建带小提交的详细重构计划，然后作为 GitHub issue 提交。适用于用户想规划重构、创建重构 RFC，或把重构拆成安全的增量步骤时。
 ---
 
 当用户想创建 refactor request 时调用此 skill。按以下步骤执行。你可以跳过你认为不必要的步骤。

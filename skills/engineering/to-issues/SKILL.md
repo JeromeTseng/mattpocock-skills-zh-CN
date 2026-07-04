@@ -1,6 +1,6 @@
 ---
 name: to-issues
-description: 使用 tracer-bullet vertical slices，把 plan、spec 或 PRD 拆成项目 issue tracker 上可独立领取的 issues。Use when user wants to convert a plan into issues, create implementation tickets, or break down work into issues.
+description: 使用 tracer-bullet 垂直切片，把计划、规格或 PRD 拆成项目 issue tracker 上可独立领取的 issues。适用于用户想把计划转成 issues、创建实现议题，或把工作拆成 issues 时。
 ---
 
 # To Issues

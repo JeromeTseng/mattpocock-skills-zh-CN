@@ -1,6 +1,6 @@
 ---
 name: wayfinder
-description: Plan a huge chunk of work — more than one agent session can hold — as a shared map of investigation tickets on your issue tracker, and resolve them one at a time until the way to the goal is clear.
+description: 把单个代理会话装不下的大块工作规划成 issue tracker 上的调查议题共享地图，并一次解决一个议题，直到通往目标的路径清晰。
 ---
 
 一个松散想法出现了：它太大，单个 agent session 装不下，而且前路仍在 fog 中。这个 skill 会把它绘制成 repo issue tracker 上的 **shared map**，然后一次处理一个 ticket。Map 与领域无关：工程工作、课程内容，或任何符合这个形状的事项都可以。

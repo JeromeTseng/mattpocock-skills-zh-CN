@@ -1,6 +1,6 @@
 ---
 name: loop-me
-description: 在这个 workspace 中，就我想构建的 workflows specs 访谈我。
+description: 在这个工作区中，就我想构建的工作流规格访谈我。
 disable-model-invocation: true
 argument-hint: "A workflow to design, or nothing to go find one"
 ---

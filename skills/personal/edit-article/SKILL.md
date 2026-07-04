@@ -1,6 +1,6 @@
 ---
 name: edit-article
-description: 通过重组 sections、提升 clarity、收紧 prose 来编辑并改进 articles。Use when user wants to edit, revise, or improve an article draft.
+description: 通过重组章节、提升清晰度、收紧文字来编辑并改进文章。适用于用户想编辑、修订或改进文章草稿时。
 ---
 
 1. 首先，根据 headings 把文章分成 sections。思考每个 section 中你想表达的 main points。

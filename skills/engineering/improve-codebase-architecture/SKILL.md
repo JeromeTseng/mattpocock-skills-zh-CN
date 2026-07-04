@@ -1,6 +1,6 @@
 ---
 name: improve-codebase-architecture
-description: 扫描 codebase 中的 deepening opportunities，生成可视化 HTML report，然后围绕你选中的候选项继续 grilling。
+description: 扫描代码库中的深化机会，生成可视化 HTML 报告，然后围绕你选中的候选项继续追问。
 disable-model-invocation: true
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: writing-fragments
-description: Grilling session that mines the user for fragments — heterogeneous nuggets of writing (claims, vignettes, sharp sentences, half-thoughts) — and appends them to a single document as raw material for a future article. Use when the user wants to develop ideas before imposing structure, or mentions "fragments", "ideate", or "raw material" for writing.
+description: 一种追问式会话，用来从用户那里挖掘片段，也就是各类写作素材（主张、小场景、尖锐句子、半成形想法），并追加到单一文档中，作为未来文章的原始素材。适用于用户想在施加结构前发展想法，或提到 “fragments”、“ideate”、“raw material” 写作素材时。
 ---
 
 <what-to-do>

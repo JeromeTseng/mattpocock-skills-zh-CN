@@ -1,6 +1,6 @@
 ---
 name: to-prd
-description: 将当前 conversation context 转成 PRD 并发布到项目 issue tracker。Use when user wants to create a PRD from the current context.
+description: 将当前对话上下文转成 PRD，并发布到项目 issue tracker。适用于用户想基于当前上下文创建 PRD 时。
 ---
 
 这个 skill 使用当前 conversation context 和 codebase understanding 产出 PRD。**不要**访谈用户，只综合你已经知道的内容。

@@ -1,6 +1,6 @@
 ---
 name: scaffold-exercises
-description: 创建包含 sections、problems、solutions 和 explainers 的 exercise directory structures，并确保通过 linting。Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.
+description: 创建包含章节、题目、答案和讲解的练习目录结构，并确保通过 linting。适用于用户想 scaffold exercises、创建 exercise stubs，或设置新的课程章节时。
 ---
 
 # Scaffold Exercises

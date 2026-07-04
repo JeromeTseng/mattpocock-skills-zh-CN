@@ -1,6 +1,6 @@
 ---
 name: wizard
-description: Run a wizard template to guide a multi-step command-line flow.
+description: 运行向导模板，引导多步骤命令行流程。
 disable-model-invocation: true
 ---
 

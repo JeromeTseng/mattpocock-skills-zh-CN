@@ -1,6 +1,6 @@
 ---
 name: ask-matt
-description: 询问当前情境适合哪个 skill 或 flow；它是本仓库所有 skills 的 router。
+description: 询问当前情境适合哪个技能或流程；它是本仓库所有 skills 的路由器。
 disable-model-invocation: true
 ---
 

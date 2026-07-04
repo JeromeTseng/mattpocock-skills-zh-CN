@@ -1,6 +1,6 @@
 ---
 name: writing-great-skills
-description: 编写和编辑优秀 skills 的 reference：让 skill 可预测的词汇和原则。
+description: 编写和编辑优秀 skills 的参考：让技能可预测的词汇和原则。
 disable-model-invocation: true
 ---
 

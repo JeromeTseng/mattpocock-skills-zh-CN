@@ -1,6 +1,6 @@
 ---
 name: claude-handoff
-description: Create a handoff summary for Claude Code.
+description: 为 Claude Code 创建交接摘要。
 disable-model-invocation: true
 ---
 

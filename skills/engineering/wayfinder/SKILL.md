@@ -1,6 +1,6 @@
 ---
 name: wayfinder
-description: 把单个代理会话装不下的大块工作规划成 issue tracker 上的 decision tickets 共享地图，并一次解决一个 ticket，直到通往目标的路径清晰。
+description: 把单个 agent session 装不下的一大块工作规划成 issue tracker 上的 decision tickets shared map，并逐一解决，直到通往 destination 的路清晰。
 disable-model-invocation: true
 ---
 
@@ -64,7 +64,7 @@ Map 是低分辨率的全局视图，每个 session 加载一次。Open tickets 
 
 每个 ticket 带一个 `wayfinder:<type>` label，取值为 `research`、`prototype`、`grilling`、`task`（见 [Ticket Types](#ticket-types)）。
 
-Session **claim** ticket 的方式，是在任何工作开始前先把 ticket assign 给 driving map 的 dev。这个 assignee 就是 claim：open 且 unassigned 的 ticket 才是 unclaimed。
+Session **claim** ticket 的方式，是在任何工作开始前**先**把 ticket assign 给 driving map 的 dev，这样并发的 sessions 就会跳过它。这个 assignee 就是 claim：open 且 unassigned 的 ticket 才是 unclaimed。
 
 Blocking 使用 tracker 的 **native** dependency relationship；这很重要，因为 tracker UI 会可视化 frontier，人类不用打开 map 也能看到哪些 ticket 可拿。只有 tracker 没有 native blocking 时，才退回 body convention。一个 ticket 的所有 blockers 都关闭后，它就是 **unblocked**；**frontier** 是 open、unblocked、unclaimed 的 children，也就是已知世界的边缘。
 
@@ -98,7 +98,7 @@ Fog 只会聚集在通往 destination 的方向。Destination 固定 scope，因
 
 Out-of-scope work 永远不会 graduate；frontier 会停在 destination。只有重画 destination 时它才会回来，而且应成为新的 effort，不是 resumption。
 
-把某事排除出 scope 是 scoping act，不是 route 上的一步。如果已有 ticket 被发现位于 destination 之外，应 **close it**，并在 **Out of scope** 中留一行 gist、原因和 closed ticket link。不要把它放进 **Decisions so far**；后者只记录真正走过的路线。
+把某事排除出 scope 是 scoping act，不是 route 上的一步。如果已有 ticket 被发现位于 destination 之外——charting 时被错误地划入 scope，或被某次 resolution 暴露——应 **close it**（closed ticket 明确不在 frontier 上），并在 **Out of scope** section 中留一行：gist 加上它为何 out of scope，并链接到 closed ticket。不要把它放进 **Decisions so far**；后者只记录真正走过的路线——scope 边界不是路线上的一步。
 
 ## Invocation
 

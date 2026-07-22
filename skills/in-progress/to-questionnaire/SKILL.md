@@ -1,6 +1,6 @@
 ---
 name: to-questionnaire
-description: 把你无法独自回答的 decision 转成一份交给他人填写的 questionnaire。
+description: 把你无法完整回答的 decision 转成一份交给他人填写的 questionnaire。
 disable-model-invocation: true
 ---
 

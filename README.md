@@ -20,7 +20,7 @@
 
 ### 发布记录
 
-- 2026-07-22：同步上游 `mattpocock/skills@ed37663`，本地同步提交将在本次提交后写入。新增 Codex skill metadata、Claude Code marketplace 安装方式与两个 in-progress skills，并刷新 wayfinder、grilling、architecture guidance 和公开文档。
+- 2026-07-22：同步上游 `mattpocock/skills@ed37663`，本地提交 `dbe24e9`。新增 Codex skill metadata、Claude Code marketplace 安装方式与两个 in-progress skills，并刷新 wayfinder、grilling、architecture guidance 和公开文档。
 - 2026-07-12：同步上游 `mattpocock/skills@391a270`，本地提交 `62cf4a9`。将 `to-prd`/`to-issues` 重组为 `to-spec`/`to-tickets`，把 `wayfinder` 提升到 engineering，新增 `setup-ts-deep-modules` 草稿，并刷新 prototype、setup 与公开索引。
 - 2026-07-04：同步上游 `mattpocock/skills@272f99b`，本地提交 `042407b`。新增 human-facing skill docs，推广 `code-review`，新增 `research`，更新 `ask-matt` flow map、`tdd` seam 规则、`grilling` confirmation gate，并将 in-progress `decision-mapping` 刷新为 `wayfinder`。
 - 2026-06-29：同步上游 `mattpocock/skills@5d78bd0`，本地提交 `79f92ff`。新增 `ask-matt`、`codebase-design`、`domain-modeling`、`diagnosing-bugs`、`grilling`、`writing-great-skills` 等内容，移除公开的 `caveman`、`zoom-out`、`write-a-skill`，并按 User-invoked / Model-invoked 刷新索引。

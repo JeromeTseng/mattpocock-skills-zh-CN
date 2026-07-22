@@ -16,6 +16,8 @@ npx skills update improve-codebase-architecture
 
 它不是随手 refactor。它先发现 high-leverage candidates，再围绕你选中的候选项继续 grilling，让改进有明确理由和边界。
 
+除非你指定区域，否则它会先读取最近的 commits，把扫描重点放在开发仍然频繁落地的 code 上。Deepening 的收益是让未来修改更容易，因此最近仍在变化的 repo 区域权重更高。
+
 ## When to reach for it
 
 你通过输入 `/improve-codebase-architecture` 调用它；agent 不会自行触发。
@@ -28,4 +30,4 @@ npx skills update improve-codebase-architecture
 
 ## Where it fits
 
-它是 codebase health lane。选中一个 opportunity 后，通常把它带入 [grill-with-docs](https://aihero.dev/skills-grill-with-docs)，再进入 main chain。完整地图见 [ask-matt](https://aihero.dev/skills-ask-matt)。
+它是 codebase health lane。选中一个 opportunity 后，[grilling](https://aihero.dev/skills-grilling) 会沿 decision tree 继续打磨，通常再把它带入 [grill-with-docs](https://aihero.dev/skills-grill-with-docs) 和 main chain。完整地图见 [ask-matt](https://aihero.dev/skills-ask-matt)。

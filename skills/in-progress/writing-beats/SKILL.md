@@ -1,6 +1,7 @@
 ---
 name: writing-beats
 description: 以自选路径风格，把文章塑造成一段节拍旅程。用户从原始素材中选择起始节拍，你只写这一段，然后提供下一步转向选项，逐个节拍推进，直到文章自然结束。适用于用户已有原始素材，并想把它组装成叙事而不是论证时。
+disable-model-invocation: true
 ---
 
 <what-to-do>

@@ -1,6 +1,7 @@
 ---
 name: writing-fragments
 description: 一种追问式会话，用来从用户那里挖掘片段，也就是各类写作素材（主张、小场景、尖锐句子、半成形想法），并追加到单一文档中，作为未来文章的原始素材。适用于用户想在施加结构前发展想法，或提到 “fragments”、“ideate”、“raw material” 写作素材时。
+disable-model-invocation: true
 ---
 
 <what-to-do>

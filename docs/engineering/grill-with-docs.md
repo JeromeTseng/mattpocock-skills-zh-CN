@@ -12,7 +12,7 @@ npx skills update grill-with-docs
 
 ## What it does
 
-`grill-with-docs` 围绕计划或设计持续追问，同时构建项目的 domain model，并把术语和决策写入 `CONTEXT.md` 与 ADRs。
+`grill-with-docs` 围绕计划或设计持续追问，同时构建项目的 domain model，并把术语和决策写入 `CONTEXT.md` 与 ADRs。它沿着 decision tree 一次询问一个问题，先解决 decisions 之间的依赖；codebase 能回答的问题会直接探索，而不是交给用户。
 
 它不是普通聊天。它是带文档痕迹的 grilling：每个问题都推动 shared understanding，重要决策会落地到 repo。
 

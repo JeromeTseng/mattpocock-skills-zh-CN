@@ -16,6 +16,10 @@ npx skills update grill-me
 
 它是 stateless grilling：不写 `CONTEXT.md`，不创建 ADR，只通过对话让 plan 更清晰。
 
+## The decision tree
+
+Session 把计划当作 decisions 组成的 tree，并按依赖逐项解决：先确定 parent decision，再处理挂在它下面的 choices。目标不是尽快达成一致，而是让每个隐含判断都变得明确。
+
 ## When to reach for it
 
 你通过输入 `/grill-me` 调用它；agent 不会自行触发。

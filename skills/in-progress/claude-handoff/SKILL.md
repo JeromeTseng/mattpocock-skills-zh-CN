@@ -1,6 +1,7 @@
 ---
 name: claude-handoff
 description: 为 Claude Code 创建交接摘要。
+argument-hint: "下一个 session 将用于什么？"
 disable-model-invocation: true
 ---
 

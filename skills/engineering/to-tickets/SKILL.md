@@ -103,5 +103,3 @@ Tracker 上 parent issue 的 reference（如果来源是 existing issue；否则
 </issue-template>
 
 无论哪种形式，都避免具体 file paths 或 code snippets；它们很快会过时。例外：如果 prototype 产出的 snippet 比 prose 更精确地编码了 decision（state machine、reducer、schema、type shape），可以内联，并简短说明来自 prototype。只保留 decision-rich parts，不要放 working demo。
-
-使用 `/implement` 一次处理 frontier 上的一个 ticket，并在 tickets 之间清空 context。

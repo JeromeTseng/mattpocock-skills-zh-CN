@@ -1,6 +1,7 @@
 ---
 name: writing-shape
 description: 通过对话会话，把一份原始素材 Markdown 文件塑造成文章：起草候选开头，逐段扩展，并在每一步讨论格式（列表、表格、提示块、引用）。适用于用户有一堆笔记、片段或粗稿，并希望把它变成可发布作品时。
+disable-model-invocation: true
 ---
 
 <what-to-do>

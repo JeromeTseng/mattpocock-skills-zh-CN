@@ -12,9 +12,13 @@ npx skills update grilling
 
 ## What it does
 
-`grilling` 是持续访谈 loop：围绕计划或设计，一次问一个问题，直到依赖关系和 decision tree 被走完。
+`grilling` 是持续访谈 loop：围绕计划、decision 或 idea，一次问一个问题，直到依赖关系和 decision tree 被走完。
 
 它不会直接执行计划。只有当用户确认已经达成共同理解后，后续实现才应该开始。
+
+## The decision tree
+
+它把讨论建模为一棵 **decision tree**：每个 decision 都可能分支出依赖它的 decisions。问题会按依赖顺序逐个出现，让前面的答案能够重塑后续问题。
 
 ## When to reach for it
 

@@ -21,7 +21,7 @@ disable-model-invocation: true
 1. **Read the pile.** 完整读取 input file，形成对内容的整体感。
 2. **Establish the prerequisites.** 与用户确定读者进场时知道什么——那些从一开始就已 **grounded** 的概念。其它一切都必须先被某个 block grounded，之后的 block 才能依赖它。见 [Grounding](#grounding)。
 3. **Draft 2-3 candidate openings.** 每个 opening 都应暗示文章的不同 thesis 或 angle。全部展示出来，迫使用户选择或组合 hybrid。选定的 opening 定义整篇文章接下来必须完成什么。
-4. **Grow paragraph by paragraph.** Opening 落地后，问 “given this opening, what does the reader need to hear next?” 从 pile 中抽取 material 回答。下一个 block 只能依赖已 grounded 的概念，并在落地时 grounded 新的概念。讨论下一 beat 应该是 paragraph、list、table、callout、quote 还是 code block。每个格式选择都应该 deliberate 且 defensible。
+4. **Grow paragraph by paragraph.** Opening 落地后，问 “given this opening, what does the reader need to hear next?” 从 pile 中抽取 material 回答。下一个 block 只能依赖已 grounded 的概念，并在落地时 grounded 新的概念。讨论下一 block 应该是 paragraph、list、table、callout、quote 还是 code block。每个格式选择都应该 deliberate 且 defensible。
 5. **Append to the article file as you go.** 不要 batch。每个达成一致的 paragraph 或 block 立即写入，让用户看到文章成形。
 6. **Loop step 4 until the article is done.** 用户决定何时完成。
 
@@ -58,7 +58,7 @@ disable-model-invocation: true
 
 ## Format arguments to actually have
 
-选择如何呈现一个 beat 时，把这些 tradeoffs 和用户大声讨论，而不是默默决定：
+选择如何呈现一个 block 时，把这些 tradeoffs 和用户大声讨论，而不是默默决定：
 
 - **Prose vs. list.** Prose 承载 argument；lists 承载 parallel items。如果 items 不是真正 parallel，prose 更好。如果是，list 更容易扫描。
 - **Inline vs. callout.** Tips、warnings 和 asides 放在 callouts（`> [!TIP]`、`> [!NOTE]`）里，但只有当它们 inline 会真正打断 main argument 时才这样做。否则保持 inline。

@@ -23,7 +23,7 @@ disable-model-invocation: true
    - **是** -> **`/to-spec`**（把 thread 变成 spec），再用 **`/to-tickets`** 拆成 tracer-bullet tickets，每个 ticket 声明 **blocking edges**。Local tracker 在 `.scratch/<feature>/issues/` 下每 ticket 一个文件，手动按 blockers-first 处理；真实 tracker 用 native blocking links，因此 blockers 已完成的 ticket 都可领取。每 ticket 启动一次 **`/implement`**，并在 tickets 之间**清空 context**。
    - **否** -> 在当前 context window 里直接运行 **`/implement`**。
 
-   无论哪种方式，**`/implement`** 都会在内部驱动 **`/tdd`** 构建每个 issue：一次一个 red-green slice；然后用 **`/code-review`** 收尾，对 diff 做 Standards + Spec 双轴 review，再提交。只想 test-first 构建一个具体 behavior 时，单独用 **`/tdd`**；想按固定点 review branch 或 PR 时，单独用 **`/code-review`**。
+   无论哪种方式，**`/implement`** 都会在内部驱动 **`/tdd`** 构建每个 issue：一次一个 red-green slice；然后用 **`/code-review`** 收尾，对 diff 做 Standards + Spec 双轴 review，再提交。只想在没有完整 spec 的情况下 test-first 构建一个具体 behavior 时，单独用 **`/tdd`**；想按固定点 review branch 或 PR 时，单独用 **`/code-review`**。
 
 ### Context hygiene
 
@@ -61,7 +61,7 @@ disable-model-invocation: true
 ## Crossing sessions
 
 - **`/handoff`** - 当 thread 快满，或需要分支到另一个 session（例如 `/prototype` session）时，把对话压缩成 markdown 文件。你不会在原地继续，而是 **打开新 session 并引用该文件** 来带过 context。它是 context windows 之间的桥，两个方向都能用。想要 **fresh session** 但又要 **保留当前对话** 时使用。
-- **`/compact`**（内置）- 留在 **同一个对话** 中，让早先 turns 被总结。只在阶段之间的明确断点使用；不要在阶段中途 compact，否则 agent 可能迷路。`/handoff` 是分叉；`/compact` 是继续。
+- **`/compact`**（内置）- 留在 **同一个对话** 中，让早先 turns 被总结。只在阶段之间的明确断点、且你不介意丢失逐字历史时使用；不要在阶段中途 compact，否则 agent 可能迷路。`/handoff` 是分叉；`/compact` 是继续。
 
 ## Standalone
 

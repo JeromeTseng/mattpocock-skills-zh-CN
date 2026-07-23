@@ -8,7 +8,7 @@ disable-model-invocation: true
 
 这是纯粹的 **explore**：在不承诺任何结构的前提下，拓宽可写内容的空间——承诺结构是 _exploit_，是另一个 skill 的工作。运行一个产出 fragments 的 grilling session，围绕用户想写的任何主题持续访谈。在这里强加 phases、outlines 或文章结构都不在范围内。
 
-当对话双方产生 fragments 时，把它们追加到单一 markdown 文件。用户会在 session 中编辑这个文件；每次写入前都要重新读取，保留他们的 edits。
+当对话双方产生 fragments 时，把它们追加到单一 markdown 文件。
 
 如果用户没有传入路径，只询问一次文档保存到哪里，然后在 session 剩余部分记住它。
 

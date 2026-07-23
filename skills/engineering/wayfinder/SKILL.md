@@ -90,7 +90,7 @@ Map 的 **Not yet specified** section 用来记录这种朦胧视野：怀疑中
 - **Ticket when** 问题已经清晰，即使它被 blocked、现在不能处理。
 - **Not yet specified when** 你还不能把它说得那么清楚。不要把 fog 预先切成 ticket-sized pieces：fog 比 ticket 粗，frontier 到达后，一片 fog 可能升级成多个 tickets，也可能一个都没有。
 
-**Not yet specified** 排除已经决定的内容（Decisions so far）、已经是 live ticket 的内容，以及 out of scope 的内容。
+**Not yet specified** 排除已经决定的内容（Decisions so far）、已经是 live ticket 的内容，以及 out of scope 的内容（下一节）。
 
 ## Out of scope
 

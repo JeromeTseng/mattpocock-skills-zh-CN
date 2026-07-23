@@ -77,11 +77,11 @@ Diagrams 承担主要信息量。Prose 要稀疏、直白，并自然使用 `/co
 
 ### Hand-built boxes-and-arrows（当 Mermaid 的 layout 妨碍表达时）
 
-当 Mermaid layout 妨碍表达时使用。Modules 用带 border 和 label 的 `<div>`；arrows 用绝对定位在 relative container 上的 inline SVG `<line>` 或 `<path>`。当你希望 "after" diagram 像一个 thick-bordered 的 deep module、internals 灰显时，就用这种方式——Mermaid 无法以合适的视觉分量渲染出那种效果。
+Modules 用带 border 和 label 的 `<div>`；arrows 用绝对定位在 relative container 上的 inline SVG `<line>` 或 `<path>`。当你希望 "after" diagram 像一个 thick-bordered 的 deep module、internals 灰显时，就用这种方式——Mermaid 无法以合适的视觉分量渲染出那种效果。
 
 ### Cross-section（适合 layered shallowness）
 
-适合 layered shallowness。用水平 bands（`h-12 border-l-4`）展示一个 call 穿过的 layers。Before：6 个薄 layers，每个几乎不做事。After：1 个厚 band，标注 consolidated responsibility。
+用水平 bands（`h-12 border-l-4`）展示一个 call 穿过的 layers。Before：6 个薄 layers，每个几乎不做事。After：1 个厚 band，标注 consolidated responsibility。
 
 ### Mass diagram（适合表达 "interface as wide as implementation"）
 

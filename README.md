@@ -16,55 +16,6 @@
 
 本仓库的最近一次同步翻译由 OpenAI Codex（GPT-5 coding agent）执行，并由仓库维护者通过提交记录纳入 `main`。翻译策略是 **skill-guided content localization**：把上游 `mattpocock/skills` 当作英文内容来源，只翻译自然语言说明，保留目录名、skill name、frontmatter key、命令、代码块、路径、URL、package/tool/API identifiers 和行为关键 labels。用户可见的安装路径统一保持为 `vinvcn/mattpocock-skills-zh-CN`。
 
-## 发布记录与验证
-
-### 发布记录
-
-- 2026-07-23：针对 `mattpocock/skills@ed37663` 做全量翻译保真度复核（非新同步）。对照上游原文逐文件审计 97 个共有 Markdown 文件，修复误译、歧义、漏译与过度翻译，并补回多份基于旧上游版本、缺失整节内容的译文（triage PR/MR surface、wayfinding operations、teach Assets、writing-great-skills、in-progress writing skills 等）。
-- 2026-07-22：同步上游 `mattpocock/skills@ed37663`，本地提交 `dbe24e9`。新增 Codex skill metadata、Claude Code marketplace 安装方式与两个 in-progress skills，并刷新 wayfinder、grilling、architecture guidance 和公开文档。
-- 2026-07-12：同步上游 `mattpocock/skills@391a270`，本地提交 `62cf4a9`。将 `to-prd`/`to-issues` 重组为 `to-spec`/`to-tickets`，把 `wayfinder` 提升到 engineering，新增 `setup-ts-deep-modules` 草稿，并刷新 prototype、setup 与公开索引。
-- 2026-07-04：同步上游 `mattpocock/skills@272f99b`，本地提交 `042407b`。新增 human-facing skill docs，推广 `code-review`，新增 `research`，更新 `ask-matt` flow map、`tdd` seam 规则、`grilling` confirmation gate，并将 in-progress `decision-mapping` 刷新为 `wayfinder`。
-- 2026-06-29：同步上游 `mattpocock/skills@5d78bd0`，本地提交 `79f92ff`。新增 `ask-matt`、`codebase-design`、`domain-modeling`、`diagnosing-bugs`、`grilling`、`writing-great-skills` 等内容，移除公开的 `caveman`、`zoom-out`、`write-a-skill`，并按 User-invoked / Model-invoked 刷新索引。
-- 2026-06-16：同步上游 `mattpocock/skills@694fa30`，本地提交 `6b594d2`。将 `teach` 从 in-progress 提升到 productivity，并更新 teaching workspace 指南：`lessons/`、`reference/`、storage strength、primary source、follow-up questions 和 quiz 答案长度约束。
-- 2026-06-05：同步上游 `mattpocock/skills@aaf2453`，本地提交 `0f36f6d`。更新 `to-prd` 的 seam-based 测试决策指导，并强化 in-progress `teach` explainers 的 citations 与 interactivity 要求。
-- 2026-05-29：同步上游 `mattpocock/skills@e3b90b5`，本地提交 `fb2000f`。新增 in-progress `teach` skill 的中文翻译，并更新 `CONTEXT.md` template 规则。
-- 2026-05-22：同步上游 `mattpocock/skills@b8be62f`，本地提交 `f0b4bd3`。新增 architecture HTML report 指南，更新 handoff 临时文件与 redaction 规则，并收紧 `CONTEXT.md` template。
-- 2026-05-15：同步上游 `mattpocock/skills@e74f006`，本地提交 `c323a74`。收紧 `CONTEXT.md` glossary 边界，并更新 `prototype` 的设计细化表述。
-- 2026-05-11：同步上游 `mattpocock/skills@9f2e0bd`，本地提交 `210cbac`。将 `handoff` 提升到 productivity，新增 `review` 草稿，并更新 writing skills。
-- 2026-05-09：同步上游 `mattpocock/skills@733d312`，本地提交 `c9fe120`。新增 `prototype` 与 `in-progress` 内容的中文翻译，并更新公开 skill 索引。
-
-### 最新 main 验证
-
-针对 `mattpocock/skills@ed37663` 的同步结果：
-
-- [x] `node scripts/check-translation.mjs` 通过。
-- [x] 公开 skill 索引一致：`engineering/`、`productivity/`、`misc/` 已同步到顶层 README 和 `.claude-plugin/plugin.json`；`personal/`、`in-progress/`、`deprecated/` 未进入 plugin 或顶层公开索引。
-- [x] 顶层 README skill 条目均链接到对应 `SKILL.md`。
-- [x] 41 个 skills 均包含本地化 `agents/openai.yaml`；user-invoked skills 的 Claude Code 与 Codex invocation policy 保持一致。
-- [x] Claude Code plugin 与 marketplace manifests 已通过 strict validation，公开集合继续包含 `engineering/`、`productivity/` 和 `misc/`。
-- [x] 新增和变更的 prose-bearing files 已按 skill-guided content localization 翻译；代码块、命令、路径、URLs 和 identifiers 保持行为关键内容不变。
-- [x] 已对比上游 in-scope 文件清单：新增 `batch-grill-me`、`to-questionnaire` 与 Codex metadata，更新 wayfinder、grilling 和 architecture guidance；未导入 changesets、release workflow、npm package state 或上游 repository-management ADR。
-- [x] `git diff --check` 和 `git diff --cached --check` 通过。
-- [!] `node scripts/audit-english.mjs` 仍会列出合理保留的英文术语、命令、示例、触发词和 identifiers，作为人工复核队列，不作为阻塞项。
-
-### 翻译保真度复核（2026-07-23）
-
-对照 `upstream/main`（= `ed37663`）逐文件审计全部 97 个本地与上游共有的 Markdown 文件，就地修复 37 个文件：
-
-- [x] 误译修复：数字错误（`≤6 words`、`1-3 entry points`）、语义偏移（`pre-agreed`、`can't fully answer`、`Trained not to use it`）、错误 skill 引用（`domain.md` 的 `/domain-modeling`）。
-- [x] 歧义修复：`ask-matt` router 范围（user-invoked skills）、`to-spec` 追问对象（modules 而非 test seams）。
-- [x] 漏译补回：多处整节/整文件缺失——triage 的 PR/MR triage surface 与 Wayfinding operations、`tdd/tests.md` 的 Tautological tests、`teach` 的 `## Assets`、`writing-great-skills` 的 GLOSSARY 与 SKILL 全文、in-progress 的 `claude-handoff`/`wizard`/writing-beats/fragments/shape 的 Grounding 机制。
-- [x] 过度翻译还原：`prototype` frontmatter 还原为上游短描述、删除上游没有的触发短语列表。
-- [x] 结构与链接：`domain-modeling.md` 交叉链接改回 `aihero.dev` 发布 URL、`engineering/README.md` 列表顺序与上游对齐。
-- [x] 行为关键内容不变：frontmatter `name` 值、slash commands、代码块、路径、label、install path（`vinvcn/mattpocock-skills-zh-CN`）均经核对未被误改；`claude plugin validate . --strict` 通过。
-
-维护者决策已落实（2026-07-23）：
-
-- [x] 全部 22 个 `docs/` 页面已全量展开对齐上游完整内容，补回所有被压缩的小节与行为关键细节（如 resolving-merge-conflicts 的 `never --abort`、handoff 的 redacted secrets、triage 的 verify-before-brief、prototype 的 primary source/throwaway branch、codebase-design 的 deep-not-shallow 与 interface-is-test-surface 等）。标题结构与上游逐一对齐。
-- [x] `CONTEXT.md` 的 Triage role 示例保留 `ready-for-agent`（与本仓库 skills 一致，上游 `ready-for-afk` 判定为过期）；`CONTEXT.md` 引用的失效路径 `docs/agents/triage-labels.md` 已修正为真实路径 `skills/engineering/setup-matt-pocock-skills/triage-labels.md`。
-- [x] in-progress writing skills 的 `explore`/`exploit` 保留英文（作为刻意 domain term，源自 explore–exploit tradeoff，与 grounded/beat/fragment 等一致）。
-- [x] `docs/engineering/research.md` 的交叉链接由上游的 `to-prd` 修正为本仓库的 `to-spec`（本仓库已将 to-prd 重命名为 to-spec）。
-
 ## 30 秒安装
 
 ```bash
